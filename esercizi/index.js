@@ -21,3 +21,19 @@ modificaTesto();
 // 6.0 Modifica l'HTML
 const $button = document.querySelector("#mio");
 $button.innerHTML = "<button> Ero un P </button>"
+
+
+// 7.0 Crea una lista
+// 8.0 Crea i list item
+const $body = document.body;
+const $container = document.getElementById("contenitore_lista");
+const $ul = document.createElement('ul');
+const elementi = ['primo', 'secondo', 'terzo', 'quarto', 'quinto'];
+
+elementi.forEach((elemento) => {
+    const $li = document.createElement('li');
+    $li.innerText = elemento;
+    $ul.appendChild($li);
+});
+
+$body.appendChild($ul);
